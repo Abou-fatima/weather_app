@@ -30,29 +30,38 @@ Une application météo complète avec authentification, appels API, cache local
 
 ### Prérequis
 - Flutter SDK 3.0+
-- Clé API OpenWeatherMap
+- Clé API OpenWeatherMap (gratuite sur https://openweathermap.org/api)
 
 ### Étapes
 
 ```bash
 # 1. Cloner le repository
-git clone https://github.com/votre-username/weather_app.git
+git clone https://github.com/Abou-fatima/weather_app.git
 cd weather_app
 
-# 2. Configurer la clé API
-# Créer un fichier .env à la racine
-API_KEY=votre_clé_api_ici
+# 2. Configurer l'environnement
+# Copier le fichier .env.example en .env
+cp .env.example .env
 
-# 3. Installer les dépendances
+# 3. Éditer .env et ajouter votre clé API
+# OPENWEATHER_API_KEY=votre_vraie_clé_api
+
+# 4. Installer les dépendances
 flutter pub get
-
-# 4. Générer les fichiers de code
-flutter pub run build_runner build
 
 # 5. Lancer l'application
 flutter run
+```
 
-lib/
+### Configuration de la clé API
+
+1. Aller sur https://openweathermap.org/api
+2. Créer un compte gratuit
+3. Générer une clé API
+4. Copier la clé dans le fichier `.env` créé depuis `.env.example`
+5. **Ne pas commiter `.env`** — il est dans `.gitignore`
+
+## 📂 Structure du Projet
 ├── core/           # Shared utilities, network, errors
 ├── data/           # Data layer (models, datasources, repositories)
 ├── domain/         # Domain layer (entities, repositories, usecases)
