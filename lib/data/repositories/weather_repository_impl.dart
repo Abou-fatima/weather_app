@@ -5,7 +5,6 @@ import 'package:weather_app/core/errors/failures.dart';
 import 'package:weather_app/core/network/network_info.dart';
 import 'package:weather_app/data/datasources/local/weather_local_datasource.dart';
 import 'package:weather_app/data/datasources/remote/weather_remote_datasource.dart';
-import 'package:weather_app/data/models/weather_model.dart';
 import 'package:weather_app/domain/entities/weather.dart';
 import 'package:weather_app/domain/repositories/weather_repository.dart';
 
@@ -38,7 +37,6 @@ class WeatherRepositoryImpl implements WeatherRepository {
     } on CacheException catch (e) {
       return Left(CacheFailure(e.message));
     } catch (e) {
-      print('WEATHER_REPO_ERROR: $e (${e.runtimeType})');
       return Left(ServerFailure('Une erreur est survenue'));
     }
   }

@@ -2,7 +2,6 @@ import 'package:dartz/dartz.dart';
 import 'package:weather_app/core/errors/failures.dart';
 import 'package:weather_app/data/datasources/local/weather_local_datasource.dart';
 import 'package:weather_app/data/datasources/remote/auth_remote_datasource.dart';
-import 'package:weather_app/data/models/user_model.dart';
 import 'package:weather_app/domain/entities/user.dart';
 import 'package:weather_app/domain/repositories/auth_repository.dart';
 
